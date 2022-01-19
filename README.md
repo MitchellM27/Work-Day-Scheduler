@@ -8,4 +8,4 @@
 
 The following image shows the web application's appearance and functionality:
 
-![Below is the layout of how the site should appear when opened. Upon completion, the past hours will be grey, the present will be red, and the future will be green. Each hour's text box will allow the user to save its contents with the save button to the right.](/Users/mitchellmudgett/bootcamp/homework-5/Work-Day-Scheduler/Assets/05-third-party-apis-homework-demo.gif)
+![Below is the layout of how the site should appear when opened. Upon completion, the past hours will be grey, the present will be red, and the future will be green. Each hour's text box will allow the user to save its contents with the save button to the right.](Assets/05-third-party-apis-homework-demo.gif)
