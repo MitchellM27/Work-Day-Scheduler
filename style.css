@@ -3,6 +3,10 @@ body {
     font-size: 16px;
     line-height: 1;
   }
+
+  .container {
+      padding-bottom: 5vh;
+  }
   
   textarea {
     background: transparent;

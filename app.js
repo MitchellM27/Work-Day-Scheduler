@@ -31,7 +31,7 @@ function loadTime () {
     console.log(currentTime);
     for (i = 0; i <timeArray.length; i++) {
         
-        if (currentTime === timeArray[i].data("time")) {
+        if (currentTime == timeArray[i].data("time")) {
             timeArray[i].addClass("present");
         } else if (currentTime > timeArray[i].data("time")) {
             timeArray[i].addClass("past");
