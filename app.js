@@ -1,3 +1,4 @@
+//creating variables for each time slot.
 var text9am = $("#hour9");
 var text10am = $("#hour10");
 var text11am = $("#hour11");
@@ -8,6 +9,7 @@ var text3pm = $("#hour3");
 var text4pm = $("#hour4");
 var text5pm = $("#hour5");
 
+//creating an array to hold each time slot.
 let timeArray = [
     text9am,
     text10am,
@@ -20,15 +22,18 @@ let timeArray = [
     text5pm,
 ];
 
+//creating a variable for the save buttons.
 var saveButton = $(".saveBtn")
 
-
+//creating a function to load the date automatically using moment.js
 function loadTime () {
     var today = moment();
     $("#currentDay").text(today.format("MMM Do, YYYY"));
 
     currentTime = moment().format("HH");
     console.log(currentTime);
+
+    //creating a for loop to differentiate past,present, and future time slots.
     for (i = 0; i <timeArray.length; i++) {
         
         if (currentTime == timeArray[i].data("time")) {
@@ -44,6 +49,7 @@ function loadTime () {
 
 loadTime ();
 
+//creating a functin that saves the user inputs to local storage.
 function handleFormSubmit(event) {
     event.preventDefault();
 
@@ -56,8 +62,10 @@ function handleFormSubmit(event) {
     localStorage.setItem("days events" +  timeTarget, textTarget.val());
 }
 
+//running the user input storage function when the buttons are pressed.
 saveButton.on("click", handleFormSubmit);
 
+//creating a function that will ensure the local storage items are populating the time slots.
 function renderEvents() {
 
     for (let el of timeArray) {
@@ -65,6 +73,7 @@ function renderEvents() {
 
 }}
 
+//running the loading data functin.
 function init () {
     renderEvents();
 }
